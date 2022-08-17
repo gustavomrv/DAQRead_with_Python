@@ -4,4 +4,5 @@
 
 import nidaqmx
 
+task = nidaqmx.Task()
 #dev1/ai0
