@@ -7,7 +7,7 @@ import nidaqmx
 
 task = nidaqmx.Task()
 
-task.ai_channels.add_ai_voltage_chan("dev4/ai0", "myAIChannel", terminal_config=DEFAULT, min_val=-5, max_val=5, VoltageUnits = VoltageUnits.VOLTS)
+task.ai_channels.add_ai_voltage_chan("dev1/ai0")    
 
 task.start()
 
