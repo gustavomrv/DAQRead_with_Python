@@ -1,22 +1,27 @@
 # before start commands     
 # pip install nidaqmx
 # ==============================================#
-
-from unittest.mock import DEFAULT
 import nidaqmx
 
-task = nidaqmx.Task()
+taskvolt = nidaqmx.Task()
+taskamp = nidaqmx.Task()
 
-task.ai_channels.add_ai_voltage_chan("dev1/ai0")    
+taskvolt.ai_channels.add_ai_voltage_chan("dev1/ai0")    
+taskamp.ai_channels.add_ai_current_chan("dev1/ai0") 
 
-task.start()
+taskvolt.start()
+taskamp.start()
 
-value = task.read()
+valuevolt = taskvolt.read()
+valueamp = taskamp.read()
 
-print(value)
+print(valuevolt)
+print(valueamp*valuevolt)
 
-task.stop()
+taskvolt.stop()
+taskamp.stop()
 
-task.close()
+taskvolt.close()
+taskamp.close()
 
 #dev1/ai0
