@@ -28,4 +28,5 @@ print(max(potencia))
 # Tmin = 0; Tmax = potencia[24]
 
 plt.axis([0, max(tensao) + 6, 0, max(potencia)+100])
+plt.savefig(fname='figura',dpi='figure', format=None, metadata=None, bbox_inches=None, pad_inches=0.1, facecolor='auto', edgecolor='auto', backend=None)
 plt.show()
